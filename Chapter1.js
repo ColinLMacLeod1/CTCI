@@ -7,7 +7,6 @@ switch(process.env.QUESTION){
     break
   default:
     console.log('Select a Question')
-
 }
 
 // 1.3   URLify a stringComp
@@ -25,7 +24,7 @@ function URLify(str) {
 
 function stringComp(str) {
   var newStr = ''
-  for(var i=0; i < str.length; ){
+  for(var i=0; i < str.length; i++){
     currentLetter = str[i]
     var j = i+1;
     while(str[j] == currentLetter){
@@ -34,7 +33,7 @@ function stringComp(str) {
     count = j-i
     newTerm = currentLetter + count.toString()
     newStr += newTerm
-    i += count
+    i += count - 1
   }
   if(str.length <= newStr.length) console.log(str)
   else console.log(newStr)
